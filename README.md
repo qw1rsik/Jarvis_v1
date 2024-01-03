@@ -123,7 +123,7 @@ for text in listen():
 ```
 <br><br><br>
 
-<h2>File fnc.py</h2><br><br>
+<h2>File fnc.py</h2><br>
 
 ```python
 import pyttsx3, bs4
@@ -132,13 +132,10 @@ import webbrowser as wb
 import requests
 import wikipedia
 
-
-
 def say(text):
     ttsEngine = pyttsx3.init()
     ttsEngine.say(text)
     ttsEngine.runAndWait()
-
 
 def hi_jarvis():
     c = random.randint(1,2)
@@ -147,15 +144,12 @@ def hi_jarvis():
     elif c == 2:
         say('Готов работать, сэр')
 
-
-
 def open_br():
     wb.open_new_tab('https://www.google.com/')
     say('Будет сделано')
 
 def good_jarvis():
     say('Тонко подмечено, сэр')
-
 
 def wiki(text):
     try:
@@ -164,7 +158,6 @@ def wiki(text):
         say(res)
     except:
         say('Я не понял запрос ни википедию')
-
 
 def switch_language():
     pyautogui.hotkey('alt', 'shift')
